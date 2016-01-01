@@ -19,19 +19,8 @@ iframe.id = 'gh-contributions-widget';
 
 atag[0].parentNode.insertBefore(iframe,atag[0]);
 
-var widget;
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function(){
-    console.log('test');
-    if (this.readyState==4 && this.status==200) {
-        widget = this.response;
-        console.log(widget);
-    }
-};
-
-// xhr.responseType = '';
-xhr.open('GET','https://github.com/users/'+username+'/contributions',true);
-xhr.send();
+var widget = '';
+widget += '<img src="http://ghchart.rshah.org/'+username+'" alt="ikuwow\'s Github chart" />';
 
 var doc = iframe.contentWindow.document;
 doc.open();
