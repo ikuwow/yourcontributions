@@ -20,7 +20,7 @@ iframe.id = 'gh-contributions-widget';
 atag[0].parentNode.insertBefore(iframe,atag[0]);
 
 var widget = '';
-widget += '<img src="http://ghchart.rshah.org/'+username+'" alt="ikuwow\'s Github chart" />';
+widget += '<img src="http://ghchart.rshah.org/'+username+'" alt="'+username+'\'s Github chart" />';
 
 var doc = iframe.contentWindow.document;
 doc.open();
