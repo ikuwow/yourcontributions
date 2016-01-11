@@ -70,17 +70,6 @@ widget += (function(){/*
 </style>
 */}).toString().replace(/(\n)/g, '').split('/*')[1].split('*/')[0];
 
-// widget += (function(){/*
-//                          <script>
-//     var autoresize_iframe = function(){
-//         var pageHeight = document.body.scrollHeight + 0;
-//         window.parent.document.getElementById('cbox').height = pageHeight + 'px';
-//     };
-//     window.onload = autoresize_iframe;
-//     </script>
-// */}).toString().replace(/(\n)/g, '').split('*')[1];
-
-
 var doc = iframe.contentWindow.document;
 doc.open();
 doc.write(widget);
