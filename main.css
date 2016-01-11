@@ -1,8 +1,17 @@
 .preview-toolbox .flex-table-item-primary {
     padding: 0 8px;
 }
+#preview-display {
+    height: 240px;
+}
 .flex-table-item span {
     margin-right:4px;
+}
+.get-code {
+    width: 100%;
+    height: 80px;
+    margin: 16px 0;
+    font-family: 'Courier New', Monaco, monospace;
 }
 footer {
     text-align: center;
