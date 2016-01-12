@@ -5,23 +5,56 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/primer/2.5.0/primer.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.3.0/octicons.min.css"/>
   <link rel="stylesheet" href="/main.css"/>
-
 </head>
 
 <body>
 
-<h1>yourcontribution</h1>
+<!-- ga tag -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-51407961-8', 'auto');
+ga('send', 'pageview');
+</script>
 
-<h2>Visualize your GitHub contributions.</h2>
+<div class="container">
+  <div class="columns">
+    <div class="four-fifths column centered">
+      <h1>yourcontribution</h1>
 
-<form class="preview-toolbox">
-    <label><span class="octicon octicon-mark-github"></span>username</label>
-    <input type="text" class="form-gh-username"></input>
-    <button type="button" class="btn form-preview">Preview</button>
-</form>
+      <h2>Visualize your GitHub contributions.</h2>
 
-<div id="preview-display">
-</div>
+
+      <form class="preview-toolbox flex-table">
+        <div class="flex-table-item">
+          <label><span class="octicon octicon-mark-github"></span>username</label>
+        </div>
+        <div class="flex-table-item flex-table-item-primary">
+          <input type="text" class="input-block form-gh-username" placeholder="Type your username here"></input>
+        </div>
+        <div class="flex-table-item">
+          <button type="button" class="btn form-preview">Preview &amp; Get Code</button>
+        </div>
+      </form>
+
+      <div id="preview-display" class="blankslate">
+          <h3>Preview Area</h3>
+      </div>
+
+      <textarea class="get-code input-contrast" readonly>
+<a href="http://github.com/[:username]" class="gh-contributions" data-gh-username="[:username]" target="_blank" style="display: none;">[:username]'s contributions</a><script src="/widget.js"></script></textarea>
+
+    </div>
+  </div><!-- .columns -->
+  <footer>
+      <p>
+      Created by <a href="http://ikuwow.github.io" target="_blank">ikuwow</a>,
+      Powered by <a href="http://ghchart.rshah.org" target="_blank">Github Chart API</a>.
+      &nbsp;<a href="https://github.com/ikuwow/yourcontribution" target="_blank">Fork me on GitHub</a></p>
+  </footer>
+</div><!-- .container -->
 
 <script src="/main.js"></script>
 </body>
