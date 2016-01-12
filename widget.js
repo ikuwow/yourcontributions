@@ -15,7 +15,7 @@ iframe.frameBorder = 0;
 iframe.marginWidth = 0;
 iframe.marginHeight = 0;
 iframe.width = '100%';
-iframe.height = '100%';
+iframe.height = '180px';
 iframe.id = 'gh-contributions-widget';
 
 atag[0].parentNode.insertBefore(iframe,atag[0]);
