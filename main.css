@@ -1,8 +1,8 @@
+textarea {
+    resize: none;
+}
 .preview-toolbox .flex-table-item-primary {
     padding: 0 8px;
-}
-#preview-display {
-    height: 240px;
 }
 .flex-table-item span {
     margin-right:4px;
