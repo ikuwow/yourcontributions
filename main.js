@@ -13,7 +13,7 @@ ptb.onclick = function() {
     aTag.innerHTML = gh_username+"'s contributions";
 
     var scriptTag = document.createElement("script");
-    scriptTag.src = "/widget.js";
+    scriptTag.src = location.href+"widget.js";
 
     var child;
     while (child = preview.lastChild) {
@@ -21,6 +21,9 @@ ptb.onclick = function() {
     }
     preview.appendChild(aTag);
     preview.appendChild(scriptTag);
+
+    var getcode = document.getElementsByClassName('get-code')[0];
+    getcode.textContent = aTag.outerHTML + scriptTag.outerHTML;
 };
 
 })();
