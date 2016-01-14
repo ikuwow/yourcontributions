@@ -3,6 +3,9 @@
 var ptb = document.getElementsByClassName("form-preview")[0];
 ptb.onclick = function() {
     var gh_username = document.getElementsByClassName("form-gh-username")[0].value;
+    if (gh_username === "") {
+        return;
+    }
     var preview = document.getElementById("preview-display");
 
     var aTag = document.createElement("a");
