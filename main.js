@@ -1,8 +1,10 @@
 (function(){
 
-var ptb = document.getElementsByClassName("form-preview")[0];
-ptb.onclick = function() {
+var preview = function() {
     var gh_username = document.getElementsByClassName("form-gh-username")[0].value;
+    if (gh_username === "") {
+        return;
+    }
     var preview = document.getElementById("preview-display");
 
     var aTag = document.createElement("a");
@@ -13,7 +15,7 @@ ptb.onclick = function() {
     aTag.innerHTML = gh_username+"'s contributions";
 
     var scriptTag = document.createElement("script");
-    scriptTag.src = location.href+"widget.js";
+    scriptTag.src = location.href.split('?')[0]+"widget.min.js";
 
     var child;
     while (child = preview.lastChild) {
@@ -25,5 +27,15 @@ ptb.onclick = function() {
     var getcode = document.getElementsByClassName('get-code')[0];
     getcode.textContent = aTag.outerHTML + scriptTag.outerHTML;
 };
+
+var ptb = document.getElementsByClassName("form-preview")[0];
+var inputGitHubUsername = document.getElementsByClassName("form-gh-username")[0];
+ptb.onclick = preview;
+inputGitHubUsername.onkeypress = function() {
+    if (window.event.keyCode === 13) {
+        preview();
+    }
+};
+
 
 })();
