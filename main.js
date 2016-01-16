@@ -15,7 +15,7 @@ var preview = function() {
     aTag.innerHTML = gh_username+"'s contributions";
 
     var scriptTag = document.createElement("script");
-    scriptTag.src = location.href+"widget.js";
+    scriptTag.src = location.href.split('?')[0]+"widget.js";
 
     var child;
     while (child = preview.lastChild) {
