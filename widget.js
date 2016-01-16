@@ -7,8 +7,6 @@ atag[0].style.display = 'none';
 
 var username = atag[0].dataset.ghUsername;
 
-console.log(username);
-
 var iframe = document.createElement('iframe');
 iframe.scrolling = 'no';
 iframe.frameBorder = 0;
