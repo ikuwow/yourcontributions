@@ -1,7 +1,6 @@
 (function(){
 
-var ptb = document.getElementsByClassName("form-preview")[0];
-ptb.onclick = function() {
+var preview = function() {
     var gh_username = document.getElementsByClassName("form-gh-username")[0].value;
     if (gh_username === "") {
         return;
@@ -28,5 +27,15 @@ ptb.onclick = function() {
     var getcode = document.getElementsByClassName('get-code')[0];
     getcode.textContent = aTag.outerHTML + scriptTag.outerHTML;
 };
+
+var ptb = document.getElementsByClassName("form-preview")[0];
+var inputGitHubUsername = document.getElementsByClassName("form-gh-username")[0];
+ptb.onclick = preview;
+inputGitHubUsername.onkeypress = function() {
+    if (window.event.keyCode === 13) {
+        preview();
+    }
+};
+
 
 })();
