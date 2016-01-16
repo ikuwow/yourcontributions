@@ -1,4 +1,4 @@
-# yourcontributions
+# Yourcontributions
 
 ![sampleWidget](./sampleWidget.png)
 
