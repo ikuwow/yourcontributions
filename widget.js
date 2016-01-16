@@ -59,13 +59,18 @@ widget += (function(){/*
 }
 .cbody {
     padding: 4px;
+    overflow: hidden;
+}
+.cbody img {
+    float: right;
+    margin-right: 4px;
 }
 .cbody a {
     color: #4078c0;
     text-decoration: none;
     font-size: 11px;
     float: right;
-    padding: 4px 10px 8px;
+    padding: 4px 10px 4px;
 }
 </style>
 */}).toString().replace(/(\n)/g, '').split('/*')[1].split('*/')[0];
