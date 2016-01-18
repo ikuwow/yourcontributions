@@ -1,5 +1,7 @@
 (function(){
 
+var getcode = document.getElementsByClassName('get-code')[0];
+
 var preview = function() {
     var gh_username = document.getElementsByClassName("form-gh-username")[0].value;
     if (gh_username === "") {
@@ -24,7 +26,6 @@ var preview = function() {
     preview.appendChild(aTag);
     preview.appendChild(scriptTag);
 
-    var getcode = document.getElementsByClassName('get-code')[0];
     getcode.textContent = aTag.outerHTML + scriptTag.outerHTML;
 };
 
@@ -37,5 +38,9 @@ inputGitHubUsername.onkeypress = function() {
     }
 };
 
+// autofocus
+getcode.onclick = function(){
+    getcode.select();
+};
 
 })();
