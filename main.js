@@ -1,5 +1,7 @@
 (function(){
 
+var debug = true;
+
 var getcode = document.getElementsByClassName('get-code')[0];
 
 var preview = function() {
@@ -17,7 +19,11 @@ var preview = function() {
     aTag.innerHTML = gh_username+"'s contributions";
 
     var scriptTag = document.createElement("script");
-    scriptTag.src = location.href.split('?')[0]+"widget.min.js";
+    if (debug) {
+        scriptTag.src = location.href.split('?')[0]+"widget.js";
+    } else {
+        scriptTag.src = location.href.split('?')[0]+"widget.min.js";
+    }
 
     var child;
     while (child = preview.lastChild) {

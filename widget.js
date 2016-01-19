@@ -14,9 +14,20 @@ iframe.marginWidth = 0;
 iframe.marginHeight = 0;
 iframe.width = '100%';
 iframe.height = '180px';
+// iframe.style.position = 'absolute';
+iframe.width = '100%';
+iframe.height = '100%';
+
 iframe.id = 'gh-contributions-widget';
 
-atag[0].parentNode.insertBefore(iframe,atag[0]);
+var widgetBox = document.createElement('div');
+widgetBox.className = 'gh-contributions-widget-box';
+widgetBox.style.overflow = 'hidden';
+widgetBox.style.position = 'relative';
+widgetBox.style.height = '180px';
+widgetBox.style.width = '100%';
+widgetBox.appendChild(iframe);
+atag[0].parentNode.insertBefore(widgetBox,atag[0]);
 
 var widget = '<div class="cbox">';
 widget += '<div class="ctitle">';
@@ -77,6 +88,7 @@ var doc = iframe.contentWindow.document;
 doc.open();
 doc.write(widget);
 doc.close();
+
 
 })();
 
