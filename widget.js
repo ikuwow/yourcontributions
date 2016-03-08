@@ -20,11 +20,12 @@ atag[0].parentNode.insertBefore(iframe,atag[0]);
 
 var widget = '<div class="cbox">';
 widget += '<div class="ctitle">';
-widget += '<img src="https://avatars.githubusercontent.com/'+username+'?s=40"/>'+username+'\'s Contributions';
+widget += '<a href="https://github.com/'+username+'" target="_blank"><img src="https://avatars.githubusercontent.com/'+username+'?s=40"/></a>'+username+'\'s Contributions';
 widget += '</div>';
 widget += '<div class="cbody">';
 widget += '<img src="http://ghchart.rshah.org/'+username+'" alt="'+username+'\'s Github chart" />';
-widget += '<a href="https://github.com/'+username+'" target="_blank">See on GitHub</a>';
+widget += '<span class="powered-by">Powered by <a href="http://ikuwow.github.io/yourcontributions/" target="_blank">Yourcontributions</a></span>';
+widget += '<a href="https://github.com/'+username+'" target="_blank" class="see-on-github">See on GitHub</a>';
 widget += '</div>';
 
 widget += '</div>';
@@ -63,12 +64,23 @@ widget += (function(){/*
     float: right;
     margin-right: 4px;
 }
-.cbody a {
+.see-on-github {
     color: #4078c0;
     text-decoration: none;
     font-size: 11px;
     float: right;
     padding: 4px 10px 4px;
+}
+.powered-by {
+    padding: 4px 10px 4px;
+    font-size: 11px;
+    text-decoration: none;
+    float: left;
+}
+.powered-by a{
+    color: #4078c0;
+    font-size: 11px;
+    text-decoration: none;
 }
 </style>
 */}).toString().replace(/(\n)/g, '').split('/*')[1].split('*/')[0];
