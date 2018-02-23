@@ -1,4 +1,5 @@
 (function(){
+'use strict';
 
 var getcode = document.getElementsByClassName('get-code')[0];
 
