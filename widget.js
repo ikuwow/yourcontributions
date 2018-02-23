@@ -23,7 +23,7 @@ widget += '<div class="ctitle">';
 widget += '<a href="https://github.com/'+username+'" target="_blank"><img src="https://avatars.githubusercontent.com/'+username+'?s=40"/></a>'+username+'\'s Contributions';
 widget += '</div>';
 widget += '<div class="cbody">';
-widget += '<img src="http://ghchart.rshah.org/'+username+'" alt="'+username+'\'s Github chart" />';
+widget += '<img src="https://ghchart.rshah.org/'+username+'" alt="'+username+'\'s Github chart" />';
 widget += '<span class="powered-by">Powered by <a href="https://ikuwow.github.io/yourcontributions/" target="_blank">Yourcontributions</a></span>';
 widget += '<a href="https://github.com/'+username+'" target="_blank" class="see-on-github">See on GitHub</a>';
 widget += '</div>';

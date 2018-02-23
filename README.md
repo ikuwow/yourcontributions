@@ -4,7 +4,7 @@
 
 GitHub contributions widget.
 
-http://ikuwow.github.io/yourcontributions/
+https://ikuwow.github.io/yourcontributions/
 
 ## Usage
 
