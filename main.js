@@ -1,4 +1,5 @@
 (function(){
+'use strict';
 
 var getcode = document.getElementsByClassName('get-code')[0];
 
@@ -10,7 +11,7 @@ var preview = function() {
     var preview = document.getElementById("preview-display");
 
     var aTag = document.createElement("a");
-    aTag.href = "http://github.com/"+gh_username;
+    aTag.href = "https://github.com/"+gh_username;
     aTag.className = "gh-contributions";
     aTag.dataset.ghUsername = gh_username;
     aTag.target="_blank";
